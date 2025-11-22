@@ -186,18 +186,14 @@ class Bowling:
             frame_type = 'spare'
         elif frame_size == 3:
             frame_type = 'strike'
-            
-        #print(f"Starting frame completion for {frame_type}s")
-        
+                    
         frames = self.points[player][frame_type]
         
-        #print(f"Current frames: {frames}")
         index = 0
         while index < len(frames):            
             frame = frames[index]
             frame_length = len(frame)
             
-            #print(f"Current frames: {frames}")
             if frame_length < frame_size:
                 frame.append(point)
                 
@@ -207,7 +203,6 @@ class Bowling:
                 else:
                     index += 1
             
-            #print(f"Current frames: {frames}")
             index += 1
                         
 
@@ -242,7 +237,3 @@ class Bowling:
             return True
         
         return False
-
-spare_strike_frames = [[2,3],[4,6],[10],[1,2],[4,3]]
-game = Bowling(spare_strike_frames)
-score = game.get_total_score()
