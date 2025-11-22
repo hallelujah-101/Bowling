@@ -86,7 +86,6 @@ class Bowling:
         last_state = None
         start = True
         while (start == True or self.strike_or_spare(player) == True) and index < frames_length:
-            # print(index)
             start = False
             
             frame = frames[index]
