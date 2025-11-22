@@ -94,9 +94,7 @@ class Bowling:
             frame_points = sum(frame)
 
             had_strike_spare = self.strike_or_spare(player)
-            # print("Try to complete frame")
             self.try_complete_frames(player, frame)
-            # print("Frame completed")
 
             if self.is_strike(frame_points, frame_length):
                 self.points[player]['strike'].append(frame)
