@@ -90,6 +90,10 @@ class Bowling:
             
             frame = frames[index]
             frame_length = len(frame)
+            
+            if frame_length == 2 and last_state == 1:
+                    raise Exception(f'The size of the frame: {frame} at index: {index} is {frame_length}. This is not allowed after a spare, check data for expected singular frame.')
+                    
             frame_points = sum(frame)
 
             had_strike_spare = self.strike_or_spare(player)
@@ -99,9 +103,6 @@ class Bowling:
                 self.points[player]['strike'].append(frame)
                 last_state = 0  
             elif self.is_spare(frame_points, frame_length):
-                if last_state == 1:
-                    raise Exception(f'The size of the frame: {frame} at index: {index} is {frame_length}. This is not allowed after a spare, check data for expected singular frame.')
-                    
                 self.points[player]['spare'].append([10])
                 last_state = 1              
             
