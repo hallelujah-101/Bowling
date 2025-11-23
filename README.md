@@ -1,5 +1,5 @@
 # Bowling game score calculator
-## Running 
+## Running tests
 
 ```
 python3 -m venv <name_of_venv>
