@@ -1,4 +1,4 @@
-# Bowling game score calculator
+# Score calculator: Bowling
 ## Running tests
 
 ```
